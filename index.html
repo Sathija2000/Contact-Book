@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📞 Contact Book</h1>
+            <p>Manage your personal and professional contacts</p>
+        </div>
+        
+        <div class="main-content">
+            <!-- Add/Edit Contact Form -->
+            <div class="sidebar">
+                <h2 id="form-title">Add New Contact</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tag">Tag</label>
+                        <select id="tag" name="tag">
+                            <option value="">Select a tag</option>
+                            <option value="friend">Friend</option>
+                            <option value="work">Work</option>
+                            <option value="family">Family</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Add Contact</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none; margin-top: 10px;">Cancel Edit</button>
+                </form>
+            </div>
+            
+            <!-- Contacts List -->
+            <div class="contacts-section">
+                <!-- Statistics -->
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-contacts">0</div>
+                        <div class="stat-label">Total Contacts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="friend-count">0</div>
+                        <div class="stat-label">Friends</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="work-count">0</div>
+                        <div class="stat-label">Work</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="family-count">0</div>
+                        <div class="stat-label">Family</div>
+                    </div>
+                </div>
+                
+                <!-- Search and Filter -->
+                <div class="search-filter-container">
+                    <input type="text" id="search" class="search-box" placeholder="Search contacts by name, phone, or email...">
+                    <select id="filter-tag" class="tag-filter">
+                        <option value="">All Tags</option>
+                        <option value="friend">Friend</option>
+                        <option value="work">Work</option>
+                        <option value="family">Family</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <!-- Contacts Grid -->
+                <div class="contacts-grid" id="contacts-container">
+                    <div class="no-contacts">
+                        No contacts found. Add your first contact to get started!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
