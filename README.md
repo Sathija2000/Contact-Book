@@ -31,27 +31,3 @@ Form validation with user feedback
 Success/error notifications
 Statistics dashboard showing contact counts
 
-
-
-
-
-High-Level System Design
-┌─────────────────────────────────────┐
-│           Contact Book App          │
-├─────────────────────────────────────┤
-│  UI Layer (Presentation)            │
-│  ├── ContactForm Component          │
-│  ├── ContactList Component          │
-│  ├── SearchFilter Component         │
-│  └── Statistics Component           │
-├─────────────────────────────────────┤
-│  Business Logic Layer               │
-│  ├── ContactManager (CRUD)          │
-│  ├── ValidationService              │
-│  ├── SearchService                  │
-│  └── NotificationService            │
-├─────────────────────────────────────┤
-│  Data Layer                         │
-│  ├── LocalStorageService            │
-│  ├── ContactModel                   │
-│  └── DataValidation                 │
